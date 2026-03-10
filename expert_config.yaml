@@ -1,0 +1,64 @@
+# =============================================================================
+# Expert Workflow Config
+# =============================================================================
+# Preencha os campos abaixo e rode:
+#   python workflow.py --config expert_config.yaml
+#
+# Para cada novo expert, duplique este arquivo com outro nome, ex:
+#   cp expert_config.yaml experts/lex_fridman.yaml
+#   python workflow.py --config experts/lex_fridman.yaml
+# =============================================================================
+
+expert:
+  # Nome do expert (sera usado como titulo do notebook e nome do agente)
+  name: "Nome do Expert"
+
+  # Descricao curta (opcional, aparece no expert.md gerado)
+  description: |
+    Breve descricao de quem e esse expert, sua area de atuacao e por que e relevante.
+
+  # Seu contexto de negocio — o agente usara isso para personalizar respostas
+  business_context: |
+    Descreva aqui seu negocio, setor, desafios atuais e objetivos.
+    Exemplo: "Tenho uma startup SaaS B2B no setor de logistica, 3 anos de operacao,
+    buscando escalar de R$50k para R$200k MRR nos proximos 12 meses."
+
+# =============================================================================
+# Fontes de Conteudo
+# =============================================================================
+# Adicione URLs de:
+#   - Videos do YouTube (incluindo playlists)
+#   - Artigos do Substack
+#   - Posts do Medium
+#   - Qualquer URL publica com conteudo textual
+#
+# Dicas:
+#   - Priorize conteudo GRATUITO e publico
+#   - Videos do YouTube tem legenda automatica indexada pelo NotebookLM
+#   - Para podcasts, use o link do episodio no YouTube (se disponivel)
+#   - Limite recomendado: 20-30 fontes para melhor qualidade
+
+sources:
+  # --- YouTube ---
+  - "https://www.youtube.com/watch?v=EXEMPLO1"
+  - "https://www.youtube.com/watch?v=EXEMPLO2"
+
+  # --- Substack ---
+  - "https://nomedoblog.substack.com/p/nome-do-post"
+
+  # --- Medium ---
+  - "https://medium.com/@username/titulo-do-post"
+
+  # --- Outros sites / podcasts ---
+  - "https://exemplo.com/artigo-importante"
+
+# =============================================================================
+# Perguntas Extras (opcional)
+# =============================================================================
+# Alem das 10 perguntas padrao do workflow, voce pode adicionar perguntas
+# especificas para o seu contexto de negocio.
+
+extra_questions:
+  - "Como esse expert abordaria o desafio de X no meu tipo de negocio?"
+  - "Quais metricas esse expert priorizaria para medir sucesso em Y?"
+  # Adicione mais perguntas conforme necessario
